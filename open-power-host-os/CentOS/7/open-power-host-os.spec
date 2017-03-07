@@ -1,11 +1,11 @@
-%define milestone alpha
+%define milestone %nil
 %if "%{milestone}"
 %define milestone_tag .%{milestone}
 %endif
 
 Name: open-power-host-os
-Version: 2.0
-Release: 1%{?milestone_tag}%{dist}
+Version: 1.5
+Release: 1%{milestone_tag}%{dist}
 Summary: OpenPOWER Host OS metapackages
 Group: System Environment/Base
 License: GPLv3
@@ -33,7 +33,7 @@ Requires: %{name}-ras = %{version}-%{release}
 Requires(post): gcc = 4.8.5-12.svn240558.el7.centos
 Requires(post): golang-github-russross-blackfriday = 1:1.2-6.git5f33e7b.el7.centos
 Requires(post): golang-github-shurcooL-sanitized_anchor_name = 1:0-1.git1dba4b3.el7.centos
-Requires(post): golang = 1.7.1-3.el7.centos
+Requires(post): golang = 1-1
 
 
 %package base
