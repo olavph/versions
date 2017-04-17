@@ -5,7 +5,7 @@
 
 Name: open-power-host-os
 Version: 2.5
-Release: 16%{?milestone_tag}%{dist}
+Release: 17%{?milestone_tag}%{dist}
 Summary: OpenPOWER Host OS metapackages
 Group: System Environment/Base
 License: GPLv3
@@ -239,6 +239,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Mon Apr 17 2017 Olav Builds Bot <olav-builds-bot@users.noreply.github.com> - 2.5-17.alpha
+- Update package dependencies
+
 * Mon Apr 17 2017 Olav Builds Bot <olav-builds-bot@users.noreply.github.com> - 2.5-16.alpha
 - Update package dependencies
 
