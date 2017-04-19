@@ -386,8 +386,8 @@
 
 Summary: Library providing a simple virtualization API
 Name: libvirt
-Version: 2.2.0
-Release: 7%{gitcommittag}%{?dist}
+Version: 3.2.0
+Release: 1%{gitcommittag}%{?dist}
 ExclusiveArch: ppc64 ppc64le x86_64 s390x
 Source0: %{name}.tar.gz
 License: LGPLv2+
@@ -2435,6 +2435,10 @@ exit 0
 #doc examples/systemtap
 
 %changelog
+* Wed Apr 19 2017 Olav Builds Bot <olav-builds-bot@users.noreply.github.com> - 3.2.0-1.git
+- Version update
+- Updating to 1587323 Merge branch hostos-devel of https://github.com/open-power-host-os/libvirt into v3.2.0
+
 * Thu Mar 23 2017 OpenPOWER Host OS Builds Bot <open-power-host-os-builds-bot@users.noreply.github.com> - 2.2.0-7.git
 - Updating to f25cbfd virtlogd.socket: Tie lifecycle to libvirtd.service
 
