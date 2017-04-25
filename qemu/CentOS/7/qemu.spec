@@ -2,6 +2,9 @@
 %global shortcommit     %(c=%{commit}; echo ${c:0:7})
 %global gitcommittag    .git%{shortcommit}
 
+# DTC (libfdt) >= 1.4.2 is not available in CentOS 7 repositories
+%global use_dtc_submodule 1
+
 # Fakeroot only: this package is useful for development in fakeroots. It is not
 # available as a base package, though it may be delivered with an approved PCR.
 # We redefine base dist here to help this package stand out as fakeroot-only.
@@ -172,7 +175,9 @@
 %global need_fdt      0
 %else
 %if 0%{?system_arm:1}%{?system_microblaze:1}%{?system_ppc:1}
+%if 0%{?!use_dtc_submodule:1}
 %global need_fdt      1
+%endif
 %endif
 %endif
 
@@ -296,6 +301,9 @@ BuildRequires: brlapi-devel
 %if 0%{?need_fdt:1}
 # For FDT device tree support
 BuildRequires: libfdt-devel
+%endif
+%if 0%{?use_dtc_submodule:1}
+BuildRequires: git
 %endif
 # For virtfs
 BuildRequires: libcap-devel
@@ -792,6 +800,10 @@ buildldflags="VL_LDFLAGS=-Wl,--build-id"
 # drop -g flag to prevent memory exhaustion by linker
 %global optflags %(echo %{optflags} | sed 's/-g//')
 sed -i.debug 's/"-g $CFLAGS"/"$CFLAGS"/g' configure
+%endif
+
+%if 0{?use_dtc_submodule:1}
+git submodule update --init dtc
 %endif
 
 ./configure \
