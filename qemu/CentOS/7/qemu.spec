@@ -295,7 +295,6 @@ BuildRequires: bluez-libs-devel
 BuildRequires: brlapi-devel
 %if 0%{?need_fdt:1}
 # For FDT device tree support
-BuildRequires: libfdt-devel
 %endif
 # For virtfs
 BuildRequires: libcap-devel
