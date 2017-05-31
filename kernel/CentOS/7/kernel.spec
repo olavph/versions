@@ -315,7 +315,7 @@ Group: System Environment/Kernel
 License: GPLv2
 URL: http://www.kernel.org/
 Version: 4.11.0
-Release: 2%{?prerelease}%{gitcommittag}%{?dist}
+Release: 3%{?prerelease}%{gitcommittag}%{?dist}
 # DO NOT CHANGE THE 'ExclusiveArch' LINE TO TEMPORARILY EXCLUDE AN ARCHITECTURE BUILD.
 # SET %%nobuildarches (ABOVE) INSTEAD
 ExclusiveArch: noarch i686 x86_64 ppc ppc64 ppc64le s390 s390x %{arm} ppcnf ppc476
@@ -1695,6 +1695,10 @@ fi
 
 
 %changelog
+* Wed May 31 2017 Olav Builds Bot <olav-builds-bot@users.noreply.github.com> - 4.11.0-3.git
+- Updating to 3e6fda8 KVM: PPC: Book3S HV: Virtualize doorbell facility on
+  POWER9
+
 * Tue May 30 2017 Olav Builds Bot <olav-builds-bot@users.noreply.github.com> - 4.11.0-2.git
 - Updating to 1ee4641 KVM: PPC: Book3S HV: Add radix checks in real-mode
   hypercall handlers
