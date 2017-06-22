@@ -16,7 +16,7 @@ Requires:	iprutils >= 2.3.12
 Requires(pre):	iprutils >= 2.3.12
 Requires(postun): iprutils >= 2.3.12
 
-BuildRequires:	libvpd-devel >= 2.2.5
+BuildRequires:	libvpd-devel >= 3.2.5
 BuildRequires:	sg3_utils-devel zlib-devel automake libtool
 BuildRequires:	librtas-devel
 Requires(post): /usr/sbin/vpdupdate
