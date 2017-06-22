@@ -14,7 +14,7 @@ Source:		%{name}.tar.gz
 
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
-BuildRequires:	sqlite-devel zlib-devel libstdc++-devel libtool
+BuildReq:	sqlite-devel zlib-devel libstdc++-devel libtool
 
 Obsoletes: libvpd(ppc)
 ExclusiveArch: ppc64 ppc64le
