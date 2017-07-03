@@ -3,7 +3,7 @@
 %global gitcommittag    .git%{shortcommit}
 
 Name:		lsvpd
-Version:	1.7.7
+Version:	1.7.1
 Release:	6%{gitcommittag}%{?dist}
 Summary:	VPD/hardware inventory utilities for Linux
 Group:		Applications/System
